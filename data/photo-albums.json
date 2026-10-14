@@ -1,41 +1,58 @@
 {
   "albums": [
     {
-      "id": "icc-profile",
-      "title": "Official player portrait",
+      "id": "world-cup-celebration",
+      "title": "T20 World Cup — Champions Moment",
+      "category": "India • World Cup",
+      "description": "Rohit Sharma celebrates India’s 2024 T20 World Cup triumph. Image published under CC BY-SA 4.0; credit Fan cricket and retain the license link.",
+      "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Rohit_Sharma_Hoists_Indian_Flag_in_Barbados.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rohit_Sharma_Hoists_Indian_Flag_in_Barbados.jpg",
+      "attribution": "Fan cricket · CC BY-SA 4.0"
+    },
+    {
+      "id": "pmo-portrait",
+      "title": "Team India reception — New Delhi",
       "category": "Player profile",
-      "description": "Rohit Sharma portrait linked from the ICC player-profile image path. Use the source link for the official profile and current details.",
-      "coverImage": "https://www.icc-cricket.com/resources/v2/images/players/rohit-sharma.png",
-      "sourceUrl": "https://www.icc-cricket.com/rankings/3852/rohit-sharma",
-      "attribution": "ICC player profile"
+      "description": "Portrait from the Prime Minister’s Office meeting with the T20 World Cup-winning team on 4 July 2024. Government Open Data License (India); attribution required.",
+      "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Rohit_Sharma_in_PMO_New_Delhi.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rohit_Sharma_in_PMO_New_Delhi.jpg",
+      "attribution": "Prime Minister’s Office · GODL-India"
+    },
+    {
+      "id": "career-portrait",
+      "title": "Rohit Sharma — early international career",
+      "category": "Career archive",
+      "description": "Archival photo from Adelaide Oval on 14 February 2008. Licensed under Creative Commons Attribution-ShareAlike; see source for full terms.",
+      "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Rohit_Sharma.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rohit_Sharma.jpg",
+      "attribution": "Blnguyen · CC BY-SA / GFDL"
+    },
+    {
+      "id": "india-australia",
+      "title": "India vs Australia — Ahmedabad",
+      "category": "Matchday",
+      "description": "Photo from the India–Australia fourth Test at Ahmedabad on 9 March 2023. Government Open Data License (India); attribution required.",
+      "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Rohit_Gurunath_Sharma.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rohit_Gurunath_Sharma.jpg",
+      "attribution": "Prime Minister’s Office · GODL-India"
     }
   ],
   "sourceLinks": [
     {
+      "title": "BCCI — Rohit Sharma photos",
+      "url": "https://www.bcci.tv/photos",
+      "description": "Official BCCI photo collections and match galleries"
+    },
+    {
       "title": "ICC — Rohit Sharma profile",
       "url": "https://www.icc-cricket.com/rankings/3852/rohit-sharma",
-      "description": "Official player profile and portrait"
+      "description": "Official player profile and career coverage"
     },
     {
-      "title": "ICC — Rohit Sharma ODI records",
-      "url": "https://www.icc-cricket.com/news/rohit-sharmas-odi-dominance-in-numbers",
-      "description": "Official ICC feature on his ODI milestones"
-    },
-    {
-      "title": "ICC — 12,000 ODI runs",
-      "url": "https://www.icc-cricket.com/news/rohit-sharma-enters-elite-odi-run-club",
-      "description": "ICC milestone report with match photography"
-    },
-    {
-      "title": "BCCI — Rohit Sharma profile",
-      "url": "https://www.bcci.tv/players/6/rohit-sharma",
-      "description": "Official board profile and media"
-    },
-    {
-      "title": "ESPNcricinfo — player archive",
-      "url": "https://www.espncricinfo.com/cricketers/rohit-sharma-34102",
-      "description": "Match archive, features and player coverage"
+      "title": "Wikimedia Commons — Rohit Sharma",
+      "url": "https://commons.wikimedia.org/wiki/Category:Rohit_Sharma",
+      "description": "Open media archive with individual image licenses"
     }
   ],
-  "note": "One official profile portrait is embedded when available. Additional official publisher pages are linked as source galleries; the site does not copy or rehost their image collections."
+  "note": "Images are externally hosted by Wikimedia Commons and are attributed to each original file page. Each image has a direct source/license link. External images may be unavailable if the source changes."
 }
