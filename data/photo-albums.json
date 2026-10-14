@@ -12,20 +12,30 @@
   ],
   "sourceLinks": [
     {
-      "title": "BCCI player page",
-      "url": "https://www.bcci.tv/players/6/rohit-sharma",
-      "description": "Official board profile and media area"
-    },
-    {
-      "title": "ICC player profile",
+      "title": "ICC — Rohit Sharma profile",
       "url": "https://www.icc-cricket.com/rankings/3852/rohit-sharma",
-      "description": "International player profile and career stats"
+      "description": "Official player profile and portrait"
     },
     {
-      "title": "ESPNcricinfo player page",
+      "title": "ICC — Rohit Sharma ODI records",
+      "url": "https://www.icc-cricket.com/news/rohit-sharmas-odi-dominance-in-numbers",
+      "description": "Official ICC feature on his ODI milestones"
+    },
+    {
+      "title": "ICC — 12,000 ODI runs",
+      "url": "https://www.icc-cricket.com/news/rohit-sharma-enters-elite-odi-run-club",
+      "description": "ICC milestone report with match photography"
+    },
+    {
+      "title": "BCCI — Rohit Sharma profile",
+      "url": "https://www.bcci.tv/players/6/rohit-sharma",
+      "description": "Official board profile and media"
+    },
+    {
+      "title": "ESPNcricinfo — player archive",
       "url": "https://www.espncricinfo.com/cricketers/rohit-sharma-34102",
-      "description": "Player archive, innings and scorecards"
+      "description": "Match archive, features and player coverage"
     }
   ],
-  "note": "Only the linked official profile portrait is embedded. Other galleries open their original publishers; no third-party image collection is copied or rehosted."
+  "note": "One official profile portrait is embedded when available. Additional official publisher pages are linked as source galleries; the site does not copy or rehost their image collections."
 }

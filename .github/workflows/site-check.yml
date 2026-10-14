@@ -20,16 +20,20 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
       - name: Check required pages, assets and scripts
         shell: bash
         run: |
           set -euo pipefail
-          for file in index.html home/style.css home/app.css home/app.js data/rohit-profile.json data/career-stats.json data/photo-albums.json data/matches.json data/records.json data/news.json data/videos.json stats/index.html stats/Batting/index.html stats/Bowling/index.html stats/Explore/index.html stats/Style/stats.css stats/Script/stats-data.js stats/Script/batting.js stats/Script/explorer.js photos/index.html photos/photos.css photos/gallery.js matches/index.html matches/matches.css matches/matches.js records/index.html records/records.css records/records.js news/index.html news/news.css news/news.js videos/index.html videos/videos.css videos/videos.js admin/index.html; do
+          for file in index.html home/style.css home/app.css home/app.js data/rohit-profile.json data/career-stats.json data/bowling-stats.json data/photo-albums.json data/matches.json data/records.json data/news.json data/videos.json stats/index.html stats/Batting/index.html stats/Bowling/index.html stats/Explore/index.html stats/Style/stats.css stats/Script/stats-data.js stats/Script/batting.js stats/Script/bowling.js stats/Script/explorer.js photos/index.html photos/photos.css photos/gallery.js matches/index.html matches/matches.css matches/matches.js records/index.html records/records.css records/records.js news/index.html news/news.css news/news.js videos/index.html videos/videos.css videos/videos.js admin/index.html admin/health.js search/index.html search/search.js fan-zone/index.html fan-zone/poll.js wallpapers/index.html wallpapers/wallpaper.js scripts/refresh_news.py; do
             test -s "$file" || { echo "::error::Missing or empty required file: $file"; exit 1; }
           done
-          for file in home/app.js stats/Script/stats-data.js stats/Script/batting.js stats/Script/explorer.js photos/gallery.js matches/matches.js records/records.js news/news.js videos/videos.js; do
+          for file in home/app.js stats/Script/stats-data.js stats/Script/batting.js stats/Script/bowling.js stats/Script/explorer.js photos/gallery.js matches/matches.js records/records.js news/news.js videos/videos.js admin/health.js search/search.js fan-zone/poll.js wallpapers/wallpaper.js; do
             node --check "$file"
           done
+          python -m py_compile scripts/refresh_news.py
           python - <<'PY'
           import json
           from pathlib import Path
@@ -37,7 +41,7 @@ jobs:
           from html.parser import HTMLParser
 
           json_paths = (
-              "data/rohit-profile.json", "data/career-stats.json",
+              "data/rohit-profile.json", "data/career-stats.json", "data/bowling-stats.json",
               "data/photo-albums.json", "data/matches.json",
               "data/records.json", "data/news.json", "data/videos.json"
           )
@@ -56,6 +60,12 @@ jobs:
               assert isinstance(row.get("runs"), (int, float)), "Runs must be numeric"
               assert isinstance(row.get("matches"), int), "Matches must be numeric"
 
+          bowling = json.load(open("data/bowling-stats.json", encoding="utf-8"))
+          assert bowling.get("formats") and all(isinstance(row.get("wickets"), int) for row in bowling["formats"])
+          matches = json.load(open("data/matches.json", encoding="utf-8"))
+          assert isinstance(matches.get("matches"), list)
+          news = json.load(open("data/news.json", encoding="utf-8"))
+          assert isinstance(news.get("items"), list) and isinstance(news.get("articles", []), list)
           home = Path("index.html").read_text(encoding="utf-8")
           assert "Rohit Sharma" in home and "tilakvarmafanclub" not in home.lower()
 
@@ -90,7 +100,7 @@ jobs:
       - name: Confirm Tilak project is not referenced by website code
         shell: bash
         run: |
-          if grep -Rni --exclude-dir=.git "tilakvarmafanclub" index.html home stats photos matches records news videos data; then
+          if grep -Rni --exclude-dir=.git "tilakvarmafanclub" index.html home stats photos matches records news videos data admin search fan-zone wallpapers scripts; then
             echo "::error::Unexpected Tilak project reference found in Rohit site files"
             exit 1
           fi

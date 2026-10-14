@@ -1,17 +1,35 @@
 {
   "player": "Rohit Sharma",
-  "source": "https://www.icc-cricket.com/rankings/3852/rohit-sharma",
+  "lastVerified": "2026-10-14",
   "milestones": [
     {
-      "title": "12,000 ODI runs",
+      "title": "Reached 12,000 men's ODI runs",
       "date": "2026-09-30",
+      "category": "Career milestone",
+      "description": "Became the seventh batter and third Indian to reach 12,000 runs in men's ODIs.",
       "source": "https://www.icc-cricket.com/news/rohit-sharma-enters-elite-odi-run-club"
     },
     {
-      "title": "Five centuries in the 2019 Men's Cricket World Cup",
-      "date": "2019",
-      "source": "https://www.icc-cricket.com/"
+      "title": "Only batter with three men's ODI double centuries",
+      "date": "Career record",
+      "category": "ODI record",
+      "description": "Scored three ODI double centuries; his 264 against Sri Lanka remains the format's highest individual score.",
+      "source": "https://www.icc-cricket.com/news/rohit-sharmas-odi-dominance-in-numbers"
+    },
+    {
+      "title": "Retired from Test cricket",
+      "date": "2025-05-07",
+      "category": "Career update",
+      "description": "BCCI confirmed his retirement from Test cricket and noted his continued availability for India's ODI campaigns at the time.",
+      "source": "https://www.bcci.tv/news/article/bcci-congratulates-rohit-sharma-on-a-glorious-test-career"
+    },
+    {
+      "title": "Retired from T20 Internationals",
+      "date": "2024-06-29",
+      "category": "Career update",
+      "description": "Announced his T20I retirement after India's 2024 Men's T20 World Cup final win.",
+      "source": "https://www.icc-cricket.com/rankings/3852/rohit-sharma"
     }
   ],
-  "note": "Verify each record's wording and source before adding further milestone entries."
+  "note": "Milestone wording and dates link to ICC/BCCI sources. Follow linked reports for source context."
 }

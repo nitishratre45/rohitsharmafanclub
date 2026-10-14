@@ -1,29 +1,43 @@
 {
+  "lastUpdated": "2026-10-14",
+  "source": {
+    "name": "ESPNcricinfo RSS + official source pages",
+    "feedUrl": "https://www.espncricinfo.com/rss/content/story/feeds/0.xml"
+  },
   "items": [
     {
-      "title": "Rohit Sharma player profile",
+      "title": "Rohit Sharma — ICC player profile",
       "publisher": "ICC",
       "dateLabel": "Official profile",
-      "summary": "Career figures and player details from the International Cricket Council.",
+      "summary": "Career figures, recent match entries and player information from the International Cricket Council.",
       "url": "https://www.icc-cricket.com/rankings/3852/rohit-sharma",
-      "category": "Player profile"
+      "category": "Official profile"
     },
     {
-      "title": "Rohit Sharma — player archive",
-      "publisher": "ESPNcricinfo",
-      "dateLabel": "Player archive",
-      "summary": "Browse the source archive for scorecards, innings and career records.",
-      "url": "https://www.espncricinfo.com/cricketers/rohit-sharma-34102",
-      "category": "Scorecards"
+      "title": "Rohit Sharma enters elite ODI run-club",
+      "publisher": "ICC",
+      "dateLabel": "30 September 2026",
+      "summary": "ICC report on Rohit Sharma reaching 12,000 runs in men's ODIs.",
+      "url": "https://www.icc-cricket.com/news/rohit-sharma-enters-elite-odi-run-club",
+      "category": "Milestone"
     },
     {
-      "title": "Rohit Sharma — official board profile",
+      "title": "Rohit Sharma — BCCI player profile",
       "publisher": "BCCI",
       "dateLabel": "Official profile",
-      "summary": "Official profile and media published by the Board of Control for Cricket in India.",
+      "summary": "Official board profile and media published by the Board of Control for Cricket in India.",
       "url": "https://www.bcci.tv/players/6/rohit-sharma",
       "category": "Official"
+    },
+    {
+      "title": "Rohit Sharma — ESPNcricinfo archive",
+      "publisher": "ESPNcricinfo",
+      "dateLabel": "Player archive",
+      "summary": "Browse source archive for innings, scorecards and career records.",
+      "url": "https://www.espncricinfo.com/cricketers/rohit-sharma-34102",
+      "category": "Scorecards"
     }
   ],
-  "note": "These are source links, not republished headlines. The site does not claim they are breaking or live news."
+  "articles": [],
+  "note": "The articles list is refreshed from the ESPNcricinfo RSS feed by GitHub Actions. Curated links are source pages, not republished headlines."
 }

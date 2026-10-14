@@ -1,0 +1,54 @@
+{
+  "player": "Rohit Sharma",
+  "snapshotDate": "Provider update date not supplied",
+  "checkedOn": "2026-10-14",
+  "source": {
+    "name": "BCCI player statistics",
+    "url": "https://live-bccitv.epicon.in/players/6/rohit-sharma?platform=international&type=men"
+  },
+  "formats": [
+    {
+      "format": "Test",
+      "matches": 67,
+      "innings": 16,
+      "balls": 383,
+      "runsConceded": 224,
+      "wickets": 2,
+      "bestBowling": "1/35",
+      "average": 112,
+      "economy": 3.51,
+      "strikeRate": 191.5,
+      "fourWicketHauls": 0,
+      "fiveWicketHauls": 0
+    },
+    {
+      "format": "ODI",
+      "matches": 288,
+      "innings": 40,
+      "balls": 610,
+      "runsConceded": 533,
+      "wickets": 9,
+      "bestBowling": "2/27",
+      "average": 59.22,
+      "economy": 5.24,
+      "strikeRate": 67.78,
+      "fourWicketHauls": 0,
+      "fiveWicketHauls": 0
+    },
+    {
+      "format": "T20I",
+      "matches": 159,
+      "innings": 9,
+      "balls": 68,
+      "runsConceded": 113,
+      "wickets": 1,
+      "bestBowling": "1/22",
+      "average": 113,
+      "economy": 9.97,
+      "strikeRate": 68,
+      "fourWicketHauls": 0,
+      "fiveWicketHauls": 0
+    }
+  ],
+  "disclaimer": "BCCI player-statistics snapshot checked on 14 October 2026; the provider does not show the table's own update date. Its ODI match count (288) lags the ICC batting profile (291), so treat bowling figures as a separate provider snapshot, not live totals."
+}

@@ -1,9 +1,55 @@
 {
-  "matches": [],
-  "lastUpdated": null,
+  "player": "Rohit Sharma",
+  "lastUpdated": "2026-10-14",
+  "live": false,
   "source": {
-    "name": "ESPNcricinfo player archive",
-    "url": "https://www.espncricinfo.com/cricketers/rohit-sharma-34102"
+    "name": "ICC player profile recent-match list",
+    "url": "https://www.icc-cricket.com/rankings/3852/rohit-sharma"
   },
-  "note": "The page displays an honest empty state until a verified scorecard feed is connected. Do not add inferred scores or dates."
+  "matches": [
+    {
+      "date": "2026-10-03",
+      "format": "ODI",
+      "opponent": "West Indies",
+      "runs": 92,
+      "result": "West Indies won by 5 wickets",
+      "sourceUrl": "https://www.icc-cricket.com/rankings/3852/rohit-sharma",
+      "sourceLabel": "ICC player profile"
+    },
+    {
+      "date": "2026-09-30",
+      "format": "ODI",
+      "opponent": "West Indies",
+      "runs": 101,
+      "result": "India won by 8 wickets",
+      "sourceUrl": "https://www.icc-cricket.com/news/records-galore-as-india-west-indies-vie-for-the-odi-series?appview=true",
+      "sourceLabel": "ICC match report"
+    },
+    {
+      "date": "2026-09-27",
+      "format": "ODI",
+      "opponent": "West Indies",
+      "runs": 32,
+      "result": "India won by 8 wickets",
+      "sourceUrl": "https://www.icc-cricket.com/teams/4/India-men",
+      "sourceLabel": "ICC India match centre"
+    },
+    {
+      "date": "2026-07-19",
+      "format": "ODI",
+      "opponent": "England",
+      "runs": 138,
+      "sourceUrl": "https://www.icc-cricket.com/rankings/3852/rohit-sharma",
+      "sourceLabel": "ICC player profile"
+    },
+    {
+      "date": "2026-07-16",
+      "format": "ODI",
+      "opponent": "England",
+      "runs": 26,
+      "sourceUrl": "https://www.icc-cricket.com/rankings/3852/rohit-sharma",
+      "sourceLabel": "ICC player profile"
+    }
+  ],
+  "note": "Recent innings copied from the ICC player-profile recent-match list as checked on 14 October 2026. Source links may open a profile or series report rather than an individual ball-by-ball scorecard; this is a dated snapshot, not a live score feed."
 }

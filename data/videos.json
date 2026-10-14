@@ -1,9 +1,15 @@
 {
   "sources": [
     {
+      "title": "BCCI — Rohit Sharma video archive",
+      "publisher": "BCCI",
+      "description": "Official board video archive and player features. Open the source to browse the latest videos.",
+      "url": "https://www.bcci.tv/players/6/rohit-sharma"
+    },
+    {
       "title": "BCCI videos",
       "publisher": "BCCI",
-      "description": "Official videos, interviews and features published by the Indian cricket board.",
+      "description": "Official interviews, highlights and cricket features published by the Indian cricket board.",
       "url": "https://www.bcci.tv/videos"
     },
     {
@@ -19,5 +25,5 @@
       "url": "https://www.espncricinfo.com/videos"
     }
   ],
-  "note": "External official-source links only; no unauthorised streams or copied video files are hosted here."
+  "note": "External official-source links only. Video availability and embedded player rights vary by publisher; no unauthorised streams or copied video files are hosted here."
 }
