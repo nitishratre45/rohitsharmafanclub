@@ -1,0 +1,46 @@
+name: Rohit Data Quality
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: '17 */12 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Validate JSON datasets and photo attribution
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          for (const file of ['data/rohit-profile.json','data/career-stats.json','data/bowling-stats.json','data/matches.json','data/news.json','data/photo-albums.json','data/records.json','data/videos.json','data/site-data.json','data/admin-media.json']) {
+            const value = JSON.parse(fs.readFileSync(file, 'utf8'));
+            if (!value || typeof value !== 'object') throw new Error('Invalid JSON root: ' + file);
+            console.log('OK', file);
+          }
+          const gallery = JSON.parse(fs.readFileSync('data/photo-albums.json','utf8'));
+          if (!Array.isArray(gallery.albums) || gallery.albums.length < 1) throw new Error('Photo gallery must have at least one album');
+          for (const item of gallery.albums) {
+            if (!item.title || !/^https:\/\//.test(item.coverImage || '') || !/^https:\/\//.test(item.sourceUrl || '') || !item.attribution) throw new Error('Photo missing title/image/source/attribution: ' + (item.id || 'unknown'));
+          }
+          const site = JSON.parse(fs.readFileSync('data/site-data.json','utf8'));
+          if (site.site.player !== 'Rohit Sharma' || site.site.jerseyNumber !== 45) throw new Error('Player identity mismatch');
+          console.log('Photo attribution and Rohit identity checks passed.');
+          NODE
+      - name: Check required routes
+        run: |
+          test -f index.html
+          test -f admin/index.html
+          test -f photos/index.html
+          test -f death-overs/one-over/index.html
+          test -f matches/complete/index.html
+          test -f matches/details/index.html
+          test -f matches/scorecards/index.html
+          test -f News-details/index.html
