@@ -1,8 +1,9 @@
 {
   "lastUpdated": "2026-10-14",
   "source": {
-    "name": "ESPNcricinfo RSS + official source pages",
-    "feedUrl": "https://www.espncricinfo.com/rss/content/story/feeds/0.xml"
+    "name": "ESPNcricinfo RSS + ICC player news archive",
+    "feedUrl": "https://www.espncricinfo.com/rss/content/story/feeds/0.xml",
+    "iccArchiveUrl": "https://www.icc-cricket.com/news/category/player-3852?appview=true"
   },
   "items": [
     {
@@ -38,6 +39,119 @@
       "category": "Scorecards"
     }
   ],
-  "articles": [],
+  "articles": [
+    {
+      "title": "News Rohit Sharma enters elite ODI run-club 30 September, 2026",
+      "publisher": "ICC",
+      "dateLabel": "ICC Rohit Sharma news archive",
+      "summary": "Article listed in the ICC Rohit Sharma news archive.",
+      "url": "https://www.icc-cricket.com/news/rohit-sharma-enters-elite-odi-run-club",
+      "category": "ICC player news"
+    },
+    {
+      "title": "ICC Men's Cricket WC India star confirms ICC Men's CWC27 will be his last 26 September, 2026",
+      "publisher": "ICC",
+      "dateLabel": "ICC Rohit Sharma news archive",
+      "summary": "Article listed in the ICC Rohit Sharma news archive.",
+      "url": "https://www.icc-cricket.com/news/india-star-confirms-icc-men-s-cwc27-will-be-his-last",
+      "category": "ICC player news"
+    },
+    {
+      "title": "News Rohit shuts out the noise and gets back among runs 20 July, 2026",
+      "publisher": "ICC",
+      "dateLabel": "ICC Rohit Sharma news archive",
+      "summary": "Article listed in the ICC Rohit Sharma news archive.",
+      "url": "https://www.icc-cricket.com/news/rohit-shuts-out-the-noise-and-gets-back-among-runs",
+      "category": "ICC player news"
+    },
+    {
+      "title": "News Gill addresses Rohit retirement talk following Lord's loss 20 July, 2026",
+      "publisher": "ICC",
+      "dateLabel": "ICC Rohit Sharma news archive",
+      "summary": "Article listed in the ICC Rohit Sharma news archive.",
+      "url": "https://www.icc-cricket.com/news/gill-addresses-rohit-retirement-talk-following-lord-s-loss",
+      "category": "ICC player news"
+    },
+    {
+      "title": "Men’s Rankings History made as India great claims top ranking for first time 29 October, 2025",
+      "publisher": "ICC",
+      "dateLabel": "ICC Rohit Sharma news archive",
+      "summary": "Article listed in the ICC Rohit Sharma news archive.",
+      "url": "https://www.icc-cricket.com/news/history-made-as-india-great-claims-top-ranking-for-first-time",
+      "category": "ICC player news"
+    },
+    {
+      "title": "News Rohit, Kohli Sydney masterclass in India’s win over Australia 25 October, 2025",
+      "publisher": "ICC",
+      "dateLabel": "ICC Rohit Sharma news archive",
+      "summary": "Article listed in the ICC Rohit Sharma news archive.",
+      "url": "https://www.icc-cricket.com/news/rohit-kohli-sydney-masterclass-in-india-s-win-over-australia",
+      "category": "ICC player news"
+    },
+    {
+      "title": "News Shastri weighs on return of Rohit, Kohli for Australia ODIs 14 October, 2025",
+      "publisher": "ICC",
+      "dateLabel": "ICC Rohit Sharma news archive",
+      "summary": "Article listed in the ICC Rohit Sharma news archive.",
+      "url": "https://www.icc-cricket.com/news/shastri-weighs-on-return-of-rohit-kohli-for-australia-odis",
+      "category": "ICC player news"
+    },
+    {
+      "title": "News Gill weighs in on Kohli and Rohit’s role in India's ODI side 9 October, 2025",
+      "publisher": "ICC",
+      "dateLabel": "ICC Rohit Sharma news archive",
+      "summary": "Article listed in the ICC Rohit Sharma news archive.",
+      "url": "https://www.icc-cricket.com/news/gill-weighs-in-on-kohli-and-rohit-s-role-in-india-s-odi-side",
+      "category": "ICC player news"
+    },
+    {
+      "title": "The ICC Review Shastri recalls decision that helped Rohit thrive in Tests 18 May, 2025",
+      "publisher": "ICC",
+      "dateLabel": "ICC Rohit Sharma news archive",
+      "summary": "Article listed in the ICC Rohit Sharma news archive.",
+      "url": "https://www.icc-cricket.com/news/shastri-recalls-decision-that-helped-rohit-thrive-in-tests",
+      "category": "ICC player news"
+    },
+    {
+      "title": "The ICC Review Shastri details how he would have handled Rohit's Test ending 16 May, 2025",
+      "publisher": "ICC",
+      "dateLabel": "ICC Rohit Sharma news archive",
+      "summary": "Article listed in the ICC Rohit Sharma news archive.",
+      "url": "https://www.icc-cricket.com/news/shastri-details-how-he-would-have-handled-rohit-s-test-ending",
+      "category": "ICC player news"
+    },
+    {
+      "title": "News Reactions pour in as Rohit Sharma announces Test retirement 8 May, 2025",
+      "publisher": "ICC",
+      "dateLabel": "ICC Rohit Sharma news archive",
+      "summary": "Article listed in the ICC Rohit Sharma news archive.",
+      "url": "https://www.icc-cricket.com/news/reactions-pour-in-as-rohit-sharma-announces-test-retirement",
+      "category": "ICC player news"
+    },
+    {
+      "title": "ICC World Test Championship Five candidates to replace Rohit as India's next Test captain 8 May, 2025",
+      "publisher": "ICC",
+      "dateLabel": "ICC Rohit Sharma news archive",
+      "summary": "Article listed in the ICC Rohit Sharma news archive.",
+      "url": "https://www.icc-cricket.com/news/five-candidates-to-replace-rohit-as-india-s-next-test-captain",
+      "category": "ICC player news"
+    },
+    {
+      "title": "News Revisiting the best of Rohit Sharma in Tests 7 May, 2025",
+      "publisher": "ICC",
+      "dateLabel": "ICC Rohit Sharma news archive",
+      "summary": "Article listed in the ICC Rohit Sharma news archive.",
+      "url": "https://www.icc-cricket.com/news/revisiting-the-best-of-rohit-sharma-in-tests",
+      "category": "ICC player news"
+    },
+    {
+      "title": "News India captain Rohit Sharma announces Test retirement 7 May, 2025",
+      "publisher": "ICC",
+      "dateLabel": "ICC Rohit Sharma news archive",
+      "summary": "Article listed in the ICC Rohit Sharma news archive.",
+      "url": "https://www.icc-cricket.com/news/india-captain-rohit-sharma-announces-test-retirement",
+      "category": "ICC player news"
+    }
+  ],
   "note": "The articles list is refreshed from the ESPNcricinfo RSS feed by GitHub Actions. Curated links are source pages, not republished headlines."
 }
