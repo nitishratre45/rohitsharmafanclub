@@ -23,6 +23,19 @@ def request(url):
     with urllib.request.urlopen(urllib.request.Request(url, headers=HEADERS), timeout=25) as response:
         return response.read()
 
+def clean_icc_title(value):
+    """Separate the publication date from ICC archive titles and remove UI labels."""
+    title = plain(value)
+    date_match = re.search(r"\\s+(\\d{1,2}\\s+[A-Za-z]+,?\\s+\\d{4})$", title)
+    date_label = plain(date_match.group(1)) if date_match else "ICC news archive"
+    if date_match:
+        title = title[:date_match.start()].strip()
+    for prefix in ("News ", "The ICC Review ", "ICC Men's Cricket WC ", "Men’s Rankings "):
+        if title.startswith(prefix):
+            title = title[len(prefix):].strip()
+            break
+    return title or plain(value), date_label
+
 class ArticleLinks(HTMLParser):
     def __init__(self):
         super().__init__()
@@ -44,10 +57,11 @@ class ArticleLinks(HTMLParser):
             self.current["parts"].append(data)
     def handle_endtag(self, tag):
         if tag == "a" and self.current is not None:
-            title = plain(" ".join(self.current["parts"]))
-            url = self.current["url"].split("#", 1)[0]
+            raw_title = plain(" ".join(self.current["parts"]))
+            title, date_label = clean_icc_title(raw_title)
+            url = self.current["url"].split("#", 1)[0].rstrip("/")
             if len(title) > 12 and url not in {a["url"] for a in self.articles}:
-                self.articles.append({"title": title, "publisher": "ICC", "dateLabel": "ICC Rohit Sharma news archive", "summary": "Article listed in the ICC Rohit Sharma news archive.", "url": url, "category": "ICC player news"})
+                self.articles.append({"title": title, "publisher": "ICC", "dateLabel": date_label, "summary": "Article listed in the ICC Rohit Sharma news archive.", "url": url, "category": "ICC player news"})
             self.current = None
 
 def read_espn():
