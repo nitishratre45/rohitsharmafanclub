@@ -1,0 +1,37 @@
+name: Rohit FanClub Site Check
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "17 */12 * * *"
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: rohit-site-check-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check required pages and data
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in index.html home/style.css home/app.css home/app.js data/rohit-profile.json stats/index.html photos/index.html matches/index.html records/index.html news/index.html videos/index.html; do
+            test -s "$file" || { echo "::error::Missing or empty required file: $file"; exit 1; }
+          done
+          python - <<'PY'
+          import json
+          for path in ("data/rohit-profile.json", "data/photo-albums.json", "data/matches.json"):
+              with open(path, encoding="utf-8") as f:
+                  json.load(f)
+              print("JSON OK:", path)
+          html = open("index.html", encoding="utf-8").read()
+          assert "Rohit Sharma" in html
+          assert "tilakvarmafanclub" not in html.lower()
+          print("Homepage identity check passed")
+          PY
