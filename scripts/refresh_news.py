@@ -26,7 +26,7 @@ def request(url):
 def clean_icc_title(value):
     """Separate the publication date from ICC archive titles and remove UI labels."""
     title = plain(value)
-    date_match = re.search(r"\\s+(\\d{1,2}\\s+[A-Za-z]+,?\\s+\\d{4})$", title)
+    date_match = re.search(r"\s+(\d{1,2}\s+[A-Za-z]+,?\s+\d{4})$", title)
     date_label = plain(date_match.group(1)) if date_match else "ICC news archive"
     if date_match:
         title = title[:date_match.start()].strip()
