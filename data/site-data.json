@@ -1,0 +1,72 @@
+{
+  "site": {
+    "name": "Rohit Sharma FanClub",
+    "shortName": "Hitman 45",
+    "player": "Rohit Sharma",
+    "jerseyNumber": 45,
+    "independentFanProject": true,
+    "lastReviewed": "2026-10-14"
+  },
+  "navigation": [
+    {
+      "label": "Home",
+      "url": "/"
+    },
+    {
+      "label": "Stats",
+      "url": "/stats/"
+    },
+    {
+      "label": "Photos",
+      "url": "/photos/"
+    },
+    {
+      "label": "Matches",
+      "url": "/matches/"
+    },
+    {
+      "label": "Records",
+      "url": "/records/"
+    },
+    {
+      "label": "News",
+      "url": "/news/"
+    },
+    {
+      "label": "Videos",
+      "url": "/videos/"
+    },
+    {
+      "label": "Search",
+      "url": "/search/"
+    },
+    {
+      "label": "Fan Zone",
+      "url": "/fan-zone/"
+    },
+    {
+      "label": "Wallpapers",
+      "url": "/wallpapers/"
+    }
+  ],
+  "dataPolicy": {
+    "careerStats": "dated snapshot; not live",
+    "matchScores": "historical archive; not live",
+    "photos": "external images with source and license attribution",
+    "news": "publisher links and dated snapshots"
+  },
+  "sources": [
+    {
+      "name": "BCCI",
+      "url": "https://www.bcci.tv/players/6/rohit-sharma"
+    },
+    {
+      "name": "ICC",
+      "url": "https://www.icc-cricket.com/rankings/3852/rohit-sharma"
+    },
+    {
+      "name": "ESPNcricinfo",
+      "url": "https://www.espncricinfo.com/cricketers/rohit-sharma-34102"
+    }
+  ]
+}
