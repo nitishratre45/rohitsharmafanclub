@@ -27,3 +27,25 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .topbar nav#mainNav{display:flex!important;flex-direction:column;align-items:stretch;gap:0;position:absolute!important;top:calc(100% + 8px)!important;left:10px!important;right:10px!important;z-index:10002!important;max-height:0;overflow:hidden;visibility:hidden;opacity:0;pointer-events:none;transform:translateY(-8px) scale(.985);transform-origin:top center;padding:0 10px;border:1px solid transparent;border-radius:18px;background:linear-gradient(150deg,rgba(9,35,69,.98),rgba(5,20,40,.98));box-shadow:0 22px 48px rgba(0,0,0,.38),inset 0 1px 0 rgba(255,255,255,.08);backdrop-filter:blur(24px) saturate(150%);transition:max-height .28s ease,opacity .2s ease,transform .26s cubic-bezier(.2,.75,.25,1),visibility .28s,border-color .2s ease,padding .28s ease}
 .topbar nav#mainNav.open{max-height:min(72vh,560px);overflow-y:auto;overscroll-behavior:contain;visibility:visible;opacity:1;pointer-events:auto;transform:translateY(0) scale(1);padding:9px 10px;border-color:rgba(114,226,241,.28)}.topbar nav#mainNav a{display:flex;min-height:48px;padding:0 12px;border-radius:10px!important;border-bottom:1px solid rgba(142,190,242,.09)!important;transform:none}.topbar nav#mainNav a:last-child{border-bottom:0!important}.topbar nav#mainNav a::after{left:12px;right:auto;bottom:5px;width:0;transition:width .2s ease}.topbar nav#mainNav a:hover::after,.topbar nav#mainNav a:focus-visible::after,.topbar nav#mainNav a[aria-current=page]::after{width:28px}body.mobile-menu-open{overflow:hidden}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.topbar,.topbar *,a,button,.feature-card,.data-card{animation:none!important;transition:none!important}}
+
+
+/* Shared Rohit Sharma FanClub design system — applies across every section */
+:root{--hitman-navy:#061326;--hitman-panel:#0b1e35;--hitman-cyan:#72e2f1;--hitman-orange:#ff8a48;--hitman-border:#213650;--hitman-radius:16px}
+html{scrollbar-color:#294b70 #061326}
+body{min-height:100vh;background:radial-gradient(ellipse at 80% 0%,rgba(25,83,143,.13),transparent 36%),var(--bg,#061326)}
+main img{max-width:100%}
+main table{width:100%;border-collapse:collapse;overflow:hidden;border-radius:12px;background:rgba(8,23,41,.75);font-variant-numeric:tabular-nums}
+main th{background:rgba(27,73,119,.55);color:#dff7ff;font-weight:700;text-align:left}
+main th,main td{padding:12px 14px;border-bottom:1px solid rgba(142,190,242,.13)}
+main tr:last-child td{border-bottom:0}
+main a:not(.btn):not(.brand):not(.feature-card):not(.source-link){text-underline-offset:3px}
+main a:not(.btn):not(.brand):not(.feature-card):not(.source-link):hover{color:var(--cyan,#72e2f1)}
+main button:not(.menu-toggle){cursor:pointer}
+main input,main select,main textarea{width:auto;max-width:100%;min-height:42px;padding:10px 12px;border:1px solid rgba(142,190,242,.22);border-radius:10px;background:#0a1422;color:#f4f7fb}
+main img{border-radius:10px}
+main .page-lead{font-size:clamp(13px,1.5vw,15px)}
+main .section-title,main .section-heading{gap:16px}
+main .status-note{border-radius:0 12px 12px 0}
+footer{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:22px max(20px,calc((100vw - 1120px)/2));color:#8fa5bf;font-size:12px}
+@media(max-width:650px){main table{display:block;max-width:100%;overflow-x:auto;white-space:nowrap}main th,main td{padding:10px 12px}.hero{gap:18px}.hero-art{min-height:300px}footer{padding:20px 18px;align-items:flex-start;flex-direction:column}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

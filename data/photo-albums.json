@@ -35,6 +35,33 @@
       "coverImage": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Rohit_Gurunath_Sharma.jpg",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rohit_Gurunath_Sharma.jpg",
       "attribution": "Prime Minister’s Office · GODL-India"
+    },
+    {
+      "id": "batting-2015-world-cup",
+      "title": "Batting for India — 2015 World Cup",
+      "category": "Batting action",
+      "description": "Rohit Sharma batting for India against UAE during the 2015 Cricket World Cup at Perth. Photo by Bahnfrend; CC BY-SA 4.0.",
+      "coverImage": "https://upload.wikimedia.org/wikipedia/commons/9/98/Rohit_Sharma_Batting.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rohit_Sharma_Batting.jpg",
+      "attribution": "Bahnfrend · CC BY-SA 4.0"
+    },
+    {
+      "id": "bowling-early-career",
+      "title": "Bowling — Adelaide Oval, 2008",
+      "category": "Training & bowling",
+      "description": "Rohit Sharma bowling at Adelaide Oval on 14 February 2008. Photo by Blnguyen; CC BY-SA 3.0 / GFDL; see original file for terms.",
+      "coverImage": "https://upload.wikimedia.org/wikipedia/commons/5/52/Rohit_Sharma_bowling.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rohit_Sharma_bowling.jpg",
+      "attribution": "Blnguyen · CC BY-SA 3.0 / GFDL"
+    },
+    {
+      "id": "fielding-early-career",
+      "title": "Fielding — Adelaide Oval, 2008",
+      "category": "Fielding",
+      "description": "Rohit Sharma fielding at Adelaide Oval on 14 February 2008. Photo by Blnguyen; CC BY-SA 3.0 / GFDL; see original file for terms.",
+      "coverImage": "https://upload.wikimedia.org/wikipedia/commons/5/50/Rohit_Sharma_fielding.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rohit_Sharma_fielding.jpg",
+      "attribution": "Blnguyen · CC BY-SA 3.0 / GFDL"
     }
   ],
   "sourceLinks": [
