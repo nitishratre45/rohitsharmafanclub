@@ -1,27 +1,35 @@
 # Rohit Sharma FanClub — Hitman 45
 
-An independent fan-made cricket website inspired by the information architecture of the Tilak Varma FanClub project. This repository is separate; no changes are made to `nitishratre45/tilakvarmafanclub`.
+An independent fan-made cricket website. This repository is separate from `nitishratre45/tilakvarmafanclub`; the Tilak repository is not modified by this project.
 
-## Current structure
+## Site
 
-- `index.html`, `home/` — responsive home and shared visual system
-- `stats/` — career-statistics landing page
-- `photos/` — gallery landing page and album data
-- `matches/` — match archive landing page and data contract
-- `records/` — sourced career milestones
-- `news/` — sourced news links
-- `videos/` — official video-source hub
-- `data/` — player profile and structured data snapshots
-- `.github/workflows/site-check.yml` — scheduled repository smoke check
+- Cloudflare Pages project: `rohitsharmafanclub`
+- Production URL: https://rohitsharmafanclub.pages.dev
+- Production branch: `main`
+- Build command: none (static HTML/CSS/JS)
+- Build output directory: repository root
 
-## Deploy to Cloudflare Pages
+## Project structure
 
-Use Git integration, production branch `main`, build command empty, and output directory `/`. The site is static HTML/CSS/JS.
+- `index.html`, `home/` — responsive homepage, shared styles and navigation
+- `stats/` — career snapshot, Batting, Bowling and Stats Explorer modules
+- `photos/` — JSON-backed gallery and attributed publisher links
+- `matches/` — JSON-backed searchable archive with format filter
+- `records/` — JSON-backed milestones with source links
+- `news/` — filterable source links; no fake breaking headlines
+- `videos/` — official video-source hub; no rehosted streams
+- `data/` — profile, stats, photo albums, matches, records, news and video source data
+- `.github/workflows/site-check.yml` — push/PR checks and scheduled validation
 
-## Data quality
+## Verification and data quality
 
-Do not label values as live unless a live source is configured. Store source URLs and update timestamps for every imported snapshot. Verify official statistics before publishing. Gallery image URLs should be verified and properly attributed.
+The GitHub Actions workflow checks required files, parses JSON, validates JavaScript syntax, checks local HTML references and ensures the site code does not reference the Tilak repository. It runs on pushes, pull requests, manual dispatch and every 12 hours.
+
+Career figures are a dated snapshot with a source URL; they are **not a live feed**. Always follow the linked ICC profile for the latest numbers. Bowling figures and match scorecards must not be fabricated. The match archive remains empty until verified scorecard data is added.
+
+Photo assets must be accessible, attributed and used consistently with the publisher's terms. The gallery links to the original sources instead of copying third-party galleries.
 
 ## Disclaimer
 
-Independent fan project; not affiliated with Rohit Sharma, BCCI, ICC, IPL or any team.
+Independent fan-made project; not affiliated with Rohit Sharma, BCCI, ICC, IPL or any team.
