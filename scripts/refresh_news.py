@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "news.json"
 ESPN_FEED = "https://www.espncricinfo.com/rss/content/story/feeds/0.xml"
 ICC_PLAYER_NEWS = "https://www.icc-cricket.com/news/category/player-3852?appview=true"
-HEADERS = {"User-Agent": "RohitSharmaFanClubNewsRefresh/1.1 (+https://github.com/nitishratre45/rohitsharmafanclub)"}
+HEADERS = {"User-Agent": "RohitSharmaFanClubNewsRefresh/1.2 (+https://github.com/nitishratre45/rohitsharmafanclub)"}
 
 def plain(value):
     value = re.sub(r"<[^>]+>", " ", value or "")
@@ -29,10 +29,16 @@ class ArticleLinks(HTMLParser):
         self.current = None
         self.articles = []
     def handle_starttag(self, tag, attrs):
-        if tag == "a":
-            href = dict(attrs).get("href", "")
-            if href.startswith("/news/") and "/news/category/" not in href:
-                self.current = {"url": "https://www.icc-cricket.com" + href, "parts": []}
+        if tag != "a":
+            return
+        href = dict(attrs).get("href", "")
+        if href.startswith("/news/") and "/news/category/" not in href:
+            url = "https://www.icc-cricket.com" + href
+        elif href.startswith("https://www.icc-cricket.com/news/") and "/news/category/" not in href:
+            url = href
+        else:
+            return
+        self.current = {"url": url, "parts": []}
     def handle_data(self, data):
         if self.current is not None:
             self.current["parts"].append(data)
