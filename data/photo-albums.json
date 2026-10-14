@@ -1,4 +1,31 @@
 {
-  "albums": [],
-  "note": "Add verified image URLs and attribution/licensing information. Do not copy Tilak Varma photo assets into this file."
+  "albums": [
+    {
+      "id": "icc-profile",
+      "title": "Official player portrait",
+      "category": "Player profile",
+      "description": "Rohit Sharma portrait linked from the ICC player-profile image path. Use the source link for the official profile and current details.",
+      "coverImage": "https://www.icc-cricket.com/resources/v2/images/players/rohit-sharma.png",
+      "sourceUrl": "https://www.icc-cricket.com/rankings/3852/rohit-sharma",
+      "attribution": "ICC player profile"
+    }
+  ],
+  "sourceLinks": [
+    {
+      "title": "BCCI player page",
+      "url": "https://www.bcci.tv/players/6/rohit-sharma",
+      "description": "Official board profile and media area"
+    },
+    {
+      "title": "ICC player profile",
+      "url": "https://www.icc-cricket.com/rankings/3852/rohit-sharma",
+      "description": "International player profile and career stats"
+    },
+    {
+      "title": "ESPNcricinfo player page",
+      "url": "https://www.espncricinfo.com/cricketers/rohit-sharma-34102",
+      "description": "Player archive, innings and scorecards"
+    }
+  ],
+  "note": "Only the linked official profile portrait is embedded. Other galleries open their original publishers; no third-party image collection is copied or rehosted."
 }

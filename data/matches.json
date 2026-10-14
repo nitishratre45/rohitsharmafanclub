@@ -1,6 +1,9 @@
 {
   "matches": [],
   "lastUpdated": null,
-  "source": null,
-  "note": "Only add matches after source verification; do not infer results."
+  "source": {
+    "name": "ESPNcricinfo player archive",
+    "url": "https://www.espncricinfo.com/cricketers/rohit-sharma-34102"
+  },
+  "note": "The page displays an honest empty state until a verified scorecard feed is connected. Do not add inferred scores or dates."
 }

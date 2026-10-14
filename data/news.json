@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "title": "Rohit Sharma player profile",
+      "publisher": "ICC",
+      "dateLabel": "Official profile",
+      "summary": "Career figures and player details from the International Cricket Council.",
+      "url": "https://www.icc-cricket.com/rankings/3852/rohit-sharma",
+      "category": "Player profile"
+    },
+    {
+      "title": "Rohit Sharma — player archive",
+      "publisher": "ESPNcricinfo",
+      "dateLabel": "Player archive",
+      "summary": "Browse the source archive for scorecards, innings and career records.",
+      "url": "https://www.espncricinfo.com/cricketers/rohit-sharma-34102",
+      "category": "Scorecards"
+    },
+    {
+      "title": "Rohit Sharma — official board profile",
+      "publisher": "BCCI",
+      "dateLabel": "Official profile",
+      "summary": "Official profile and media published by the Board of Control for Cricket in India.",
+      "url": "https://www.bcci.tv/players/6/rohit-sharma",
+      "category": "Official"
+    }
+  ],
+  "note": "These are source links, not republished headlines. The site does not claim they are breaking or live news."
+}

@@ -3,7 +3,8 @@
   "snapshotDate": "2026-10-14",
   "source": {
     "name": "ICC player profile",
-    "url": "https://www.icc-cricket.com/rankings/3852/rohit-sharma"
+    "url": "https://www.icc-cricket.com/rankings/3852/rohit-sharma",
+    "checkedOn": "2026-10-14"
   },
   "formats": [
     {
@@ -11,9 +12,12 @@
       "matches": 67,
       "runs": 4301,
       "average": 40.58,
+      "strikeRate": 57.06,
       "highestScore": "212",
       "hundreds": 12,
       "fifties": 18,
+      "fours": 473,
+      "sixes": 88,
       "status": "Retired"
     },
     {
@@ -21,9 +25,12 @@
       "matches": 291,
       "runs": 12120,
       "average": 49.27,
+      "strikeRate": 93.38,
       "highestScore": "264",
       "hundreds": 35,
       "fifties": 63,
+      "fours": 1148,
+      "sixes": 381,
       "status": "Active format"
     },
     {
@@ -31,11 +38,14 @@
       "matches": 159,
       "runs": 4231,
       "average": 32.05,
-      "highestScore": "121",
+      "strikeRate": 140.89,
+      "highestScore": "121*",
       "hundreds": 5,
       "fifties": 32,
+      "fours": 383,
+      "sixes": 205,
       "status": "Retired"
     }
   ],
-  "disclaimer": "Historical snapshot from the source page available at build time; refresh before presenting as live/current data."
+  "disclaimer": "Snapshot checked against the ICC player profile on 14 October 2026. ODI totals can change; always open the linked source for the latest figures. Bowling figures are not included in this batting dataset."
 }

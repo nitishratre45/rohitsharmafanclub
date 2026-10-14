@@ -17,27 +17,81 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Check required pages and modules
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check required pages, assets and scripts
         shell: bash
         run: |
           set -euo pipefail
-          for file in index.html home/style.css home/app.css home/app.js data/rohit-profile.json data/career-stats.json data/photo-albums.json data/matches.json data/records.json stats/index.html stats/Batting/index.html stats/Bowling/index.html stats/Explore/index.html stats/Style/stats.css stats/Script/stats-data.js stats/Script/batting.js stats/Script/explorer.js photos/index.html matches/index.html records/index.html news/index.html videos/index.html admin/index.html; do
+          for file in index.html home/style.css home/app.css home/app.js data/rohit-profile.json data/career-stats.json data/photo-albums.json data/matches.json data/records.json data/news.json data/videos.json stats/index.html stats/Batting/index.html stats/Bowling/index.html stats/Explore/index.html stats/Style/stats.css stats/Script/stats-data.js stats/Script/batting.js stats/Script/explorer.js photos/index.html photos/photos.css photos/gallery.js matches/index.html matches/matches.css matches/matches.js records/index.html records/records.css records/records.js news/index.html news/news.css news/news.js videos/index.html videos/videos.css videos/videos.js admin/index.html; do
             test -s "$file" || { echo "::error::Missing or empty required file: $file"; exit 1; }
+          done
+          for file in home/app.js stats/Script/stats-data.js stats/Script/batting.js stats/Script/explorer.js photos/gallery.js matches/matches.js records/records.js news/news.js videos/videos.js; do
+            node --check "$file"
           done
           python - <<'PY'
           import json
-          for path in ("data/rohit-profile.json", "data/career-stats.json", "data/photo-albums.json", "data/matches.json", "data/records.json"):
+          from pathlib import Path
+          from urllib.parse import urlparse
+          from html.parser import HTMLParser
+
+          json_paths = (
+              "data/rohit-profile.json", "data/career-stats.json",
+              "data/photo-albums.json", "data/matches.json",
+              "data/records.json", "data/news.json", "data/videos.json"
+          )
+          for path in json_paths:
               with open(path, encoding="utf-8") as f:
-                  data = json.load(f)
+                  json.load(f)
               print("JSON OK:", path)
+
           stats = json.load(open("data/career-stats.json", encoding="utf-8"))
           assert stats.get("player") == "Rohit Sharma"
+          assert stats.get("source", {}).get("url", "").startswith("https://")
+          assert stats.get("snapshotDate")
           assert stats.get("formats"), "Career stats formats are missing"
           for row in stats["formats"]:
               assert row.get("format"), "Format name missing"
               assert isinstance(row.get("runs"), (int, float)), "Runs must be numeric"
-          html = open("index.html", encoding="utf-8").read()
-          assert "Rohit Sharma" in html
-          assert "tilakvarmafanclub" not in html.lower()
-          print("Homepage identity and stats schema checks passed")
+              assert isinstance(row.get("matches"), int), "Matches must be numeric"
+
+          home = Path("index.html").read_text(encoding="utf-8")
+          assert "Rohit Sharma" in home and "tilakvarmafanclub" not in home.lower()
+
+          class Links(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.paths = []
+              def handle_starttag(self, tag, attrs):
+                  attrs = dict(attrs)
+                  for key in ("href", "src"):
+                      value = attrs.get(key, "")
+                      if value.startswith("/") and not value.startswith("//"):
+                          self.paths.append(value.split("#", 1)[0].split("?", 1)[0])
+
+          html_files = [Path("index.html")] + [p for p in Path(".").rglob("*.html") if ".git" not in p.parts and p != Path("index.html")]
+          missing = []
+          for html_path in html_files:
+              parser = Links()
+              parser.feed(html_path.read_text(encoding="utf-8"))
+              for raw in parser.paths:
+                  if not raw:
+                      continue
+                  target = Path(raw.lstrip("/"))
+                  if raw.endswith("/"):
+                      target = target / "index.html"
+                  if not target.exists():
+                      missing.append(f"{html_path}: {raw}")
+          assert not missing, "Broken local HTML references:\n" + "\n".join(missing)
+          print(f"Local HTML references OK across {len(html_files)} pages")
+          print("Rohit identity, source metadata and stats schema checks passed")
           PY
+      - name: Confirm Tilak project is not referenced by website code
+        shell: bash
+        run: |
+          if grep -Rni --exclude-dir=.git "tilakvarmafanclub" index.html home stats photos matches records news videos data; then
+            echo "::error::Unexpected Tilak project reference found in Rohit site files"
+            exit 1
+          fi
+          echo "Rohit site is independent of the Tilak project."

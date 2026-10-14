@@ -1,0 +1,23 @@
+{
+  "sources": [
+    {
+      "title": "BCCI videos",
+      "publisher": "BCCI",
+      "description": "Official videos, interviews and features published by the Indian cricket board.",
+      "url": "https://www.bcci.tv/videos"
+    },
+    {
+      "title": "ICC videos",
+      "publisher": "ICC",
+      "description": "Official international cricket video and feature archive.",
+      "url": "https://www.icc-cricket.com/videos"
+    },
+    {
+      "title": "ESPNcricinfo video archive",
+      "publisher": "ESPNcricinfo",
+      "description": "Video features and cricket coverage from ESPNcricinfo.",
+      "url": "https://www.espncricinfo.com/videos"
+    }
+  ],
+  "note": "External official-source links only; no unauthorised streams or copied video files are hosted here."
+}
