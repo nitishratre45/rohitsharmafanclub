@@ -1,0 +1,41 @@
+{
+  "player": "Rohit Sharma",
+  "snapshotDate": "2026-10-14",
+  "source": {
+    "name": "ICC player profile",
+    "url": "https://www.icc-cricket.com/rankings/3852/rohit-sharma"
+  },
+  "formats": [
+    {
+      "format": "Test",
+      "matches": 67,
+      "runs": 4301,
+      "average": 40.58,
+      "highestScore": "212",
+      "hundreds": 12,
+      "fifties": 18,
+      "status": "Retired"
+    },
+    {
+      "format": "ODI",
+      "matches": 291,
+      "runs": 12120,
+      "average": 49.27,
+      "highestScore": "264",
+      "hundreds": 35,
+      "fifties": 63,
+      "status": "Active format"
+    },
+    {
+      "format": "T20I",
+      "matches": 159,
+      "runs": 4231,
+      "average": 32.05,
+      "highestScore": "121",
+      "hundreds": 5,
+      "fifties": 32,
+      "status": "Retired"
+    }
+  ],
+  "disclaimer": "Historical snapshot from the source page available at build time; refresh before presenting as live/current data."
+}
