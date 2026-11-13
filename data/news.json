@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-14",
+  "lastUpdated": "2026-11-13",
   "source": {
     "name": "ESPNcricinfo RSS + ICC player news archive",
     "feedUrl": "https://www.espncricinfo.com/rss/content/story/feeds/0.xml",
@@ -40,6 +40,14 @@
     }
   ],
   "articles": [
+    {
+      "title": "Matt Henry six-for and Will Young hundred crush India",
+      "publisher": "ESPNcricinfo",
+      "dateLabel": "Fri, 13 Nov 2026 12:56:42 GMT",
+      "summary": "NZ fast bowler dismissed Rohit Sharma, Virat Kohli and Shreyas Iyer in the first over to spearhead a 244-run win",
+      "url": "https://www.cricinfo.com/ci/content/story/1562500.html?ex_cid=OTC-RSS",
+      "category": "Latest article"
+    },
     {
       "title": "Rohit Sharma enters elite ODI run-club",
       "publisher": "ICC",
